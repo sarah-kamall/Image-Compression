@@ -6,7 +6,7 @@ def psnr(original, compressed):
     if mse == 0:
         return float('inf')
     max_pixel = 255.0
-    psnr_value = 20 * np.log10(max_pixel / np.sqrt(mse))
+    psnr_value = 10 * np.log10((max_pixel**2) / np.sqrt(mse))
     return psnr_value
 
 # Read original and restored images
